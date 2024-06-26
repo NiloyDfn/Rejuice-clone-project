@@ -2,75 +2,87 @@
     font-family: nb;
     src: url(./NBInternationalProBoo.ttf);
 }
+
 @font-face {
     font-family: rj;
     src: url(./Rejouice-Headline.ttf);
 }
-*{
-margin : 0;
-padding: 0;
-box-sizing : border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,body {
-height: 100%;
-width:  100%;
+html,
+body {
+    height: 100%;
+    width: 100%;
 }
 
 
-.page1{
+.page1 {
     height: 100vh;
     width: 100%;
     position: relative;
-   
+
 }
-.ph1{
+
+.ph1 {
     font-family: rj;
 }
-.page1 video{
+
+.page1 video {
     object-fit: cover;
     height: 100%;
     width: 100%;
     position: absolute;
 }
-.page1-content{
+
+.page1-content {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
     z-index: 10;
     color: white;
 }
-.page1-content h1{
+
+.page1-content h1 {
     font-size: 25vw;
-    font-weight:100 ;
+    font-weight: 100;
     line-height: 30vw;
 }
-.page1-content h1 span{
-   font-family: rj; 
-   display: inline-block;
+
+.page1-content h1 span {
+    font-family: rj;
+    display: inline-block;
 }
-.nav{
+
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3vw 3vw;
     width: 100%;
 }
-.nav h3{
-    font: size 1.4vw;   
+
+.nav h3 {
+    font: size 1.4vw;
     font-weight: 100;
     font-family: nb;
 }
-.nav h4{
+
+.nav h4 {
     font-size: 1.4vw;
     font-weight: 100;
     font-family: nb;
 }
-.cursor{
+
+.cursor {
     height: 7.5vw;
     width: 7.5vw;
     display: flex;
@@ -81,19 +93,22 @@ width:  100%;
     z-index: 9;
     cursor: pointer;
     transform: translate(-50%, -50%);
-    background-color:#FF5F38 ;
+    background-color: #FF5F38;
 }
-.cursor h5{
-   font-size: 1.2vw; 
-   font-weight: 500;
+
+.cursor h5 {
+    font-size: 1.2vw;
+    font-weight: 500;
 }
-.page2{
+
+.page2 {
     height: 100vh;
     padding: 0vw 2.2vw;
     width: 100%;
-    background-color: #edc96f ;
+    background-color: #edc96f;
 }
-.page2-part1{
+
+.page2-part1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,21 +118,23 @@ width:  100%;
     border-bottom: 1px solid black;
 }
 
-.page2-part1 h4{
+.page2-part1 h4 {
     width: 25%;
     line-height: 2.2vw;
     font-size: 1.8vw;
     font-weight: 100;
     font-family: nb;
 }
-.page2-part1 h3{
+
+.page2-part1 h3 {
     width: 25%;
     line-height: 2.2vw;
     font-size: 1.8vw;
     font-weight: 100;
     font-family: nb;
 }
-.page2-part2 h4{
+
+.page2-part2 h4 {
     font-size: 4vw;
     font-family: nb;
     font-weight: 100;
@@ -129,33 +146,39 @@ width:  100%;
     padding: 0vw 4vw;
     font-family: nb;
 }
-.page3{
+
+.page3 {
     min-height: 100vh;
     width: 100%;
     position: relative;
     padding: 3vw;
 }
-.page3-top{
+
+.page3-top {
     text-align: center;
 }
-.page3-top h4{
+
+.page3-top h4 {
     margin-bottom: 1vw;
     font-size: 1vw;
     font-weight: 500;
 }
-.page3-top h4 span{
+
+.page3-top h4 span {
     font-size: 0.7vw;
     background-color: black;
     color: white;
     padding: 4px 10px;
     border-radius: 10px;
 }
-.page3-top h2{
+
+.page3-top h2 {
     font-size: 4vw;
     font-weight: 500;
-    
+
 }
-.page3-elements{
+
+.page3-elements {
     display: flex;
     align-items: center;
     margin-top: 8vw;
@@ -163,19 +186,22 @@ width:  100%;
     height: 75vh;
     width: 100%;
 }
-.page3-elements .box{
+
+.page3-elements .box {
     height: 100%;
     position: relative;
     width: 33%;
 }
-.page3-elements .box video{
+
+.page3-elements .box video {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
 
 }
-.page3-elements .box img{
+
+.page3-elements .box img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -183,64 +209,75 @@ width:  100%;
     transition: all ease .6s;
     object-position: center;
 }
-.page3-elements .box:hover img{
+
+.page3-elements .box:hover img {
     opacity: 0;
 }
-.page4{
+
+.page4 {
     height: 100vh;
     width: 100%;
     position: relative;
     padding: 5vw;
     background-color: #C0AAA7;
 }
-.p4-p1{
+
+.p4-p1 {
     margin-bottom: 2vw;
     text-transform: capitalize;
     border-bottom: 1px solid black;
 }
-.p4-p1 h2{
+
+.p4-p1 h2 {
     font-family: nb;
     font-weight: 100;
     text-transform: capitalize;
-    
+
 }
+
 .p4-p2 {
     margin-top: 1.5vw;
 }
-.p4-p2 h1{
+
+.p4-p2 h1 {
     font-family: nb;
     font-weight: 100;
     width: 85%;
     font-size: 3.6vw;
     line-height: 4.8vw;
     letter-spacing: 2px;
-    text-transform:capitalize;
+    text-transform: capitalize;
     word-spacing: .5vw;
 }
-.page5{
+
+.page5 {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
 }
-.page5 video{
+
+.page5 video {
     height: 100%;
     width: 100%;
 }
-.page5 svg{
+
+.page5 svg {
     position: absolute;
     height: 65%;
 }
-.page6{
+
+.page6 {
     height: 100vh;
     width: 100%;
     padding: 4vw 0vw;
 
 }
-.page6 h1{
+
+.page6 h1 {
     font-size: 10vw;
     font-family: rj;
     font-weight: 100;
@@ -248,7 +285,8 @@ width:  100%;
     width: 96%;
     margin-left: 2%;
 }
-.swiperdiv{
+
+.swiperdiv {
     height: 60vh;
     width: 100%;
     margin-top: -5%;
@@ -259,29 +297,29 @@ width:  100%;
 .swiper {
     width: 130%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     /* display: block; */
     width: 19%;
     align-items: flex-end;
     object-fit: cover;
-  }
+}
 
-  .swiper {
+.swiper {
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  .loader{
+.loader {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -291,10 +329,11 @@ width:  100%;
     justify-content: center;
     align-items: center;
     gap: 10px;
-  }
-  .loader h3{
+}
+
+.loader h3 {
     color: white;
     font-family: nb;
     font-size: 2vw;
     font-weight: 500;
-  }
+}
