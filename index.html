@@ -14,15 +14,33 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
+    <!-- Loader Section (unchanged as requested) -->
     <div class="loader">
       <h3>Tomorrow's</h3>
       <h3>Brand</h3>
       <h3>Today</h3>
     </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-close">Close</div>
+      <div class="menu-items">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="main">
-      <div class="page1">
+      <!-- Page 1 - Hero Section -->
+      <div class="page1" id="home">
         <div class="cursor">
           <h5>Play Reel</h5>
         </div>
@@ -30,7 +48,7 @@
         <div class="page1-content">
           <div class="nav">
             <h3>The Venture Agency.</h3>
-            <h4>Menu</h4>
+            <h4 class="menu-toggle">Menu</h4>
           </div>
           <h1 class="ph1">
             <span>r</span><span>e</span><span>j</span><span>o</span
@@ -38,42 +56,48 @@
           </h1>
         </div>
       </div>
-      <div class="page2">
+
+      <!-- Page 2 - About Section -->
+      <div class="page2" id="about">
         <div class="page2-part1">
           <h4>Full-service creative agency. Two engagement models.</h4>
           <h3>Paris & San Diego</h3>
         </div>
         <div class="page2-part2">
           <h4>We are a digital brand accelerator.</h4>
-          <h4>design,develop,and scale market-defining</h4>
+          <h4>design, develop, and scale market-defining</h4>
           <h4>by unlocking their hidden potential.</h4>
           <h4>full cash Compensation or offset up to</h4>
           <h4>50% of our fees for equity in your</h4>
-          <h4>company.Your vision,your decision.</h4>
+          <h4>company. Your vision, your decision.</h4>
         </div>
       </div>
-      <div class="page3">
+
+      <!-- Page 3 - Services Section -->
+      <div class="page3" id="services">
         <div class="page3-top">
           <h4>Agency & Venture <span>Models</span></h4>
-          <h2>Explore or Services</h2>
+          <h2>Explore our Services</h2>
           <h2>& engagement models</h2>
         </div>
         <div class="page3-elements">
           <div class="box">
-            <img src="img1.jpg" alt="" />
+            <img src="img1.jpg" alt="Service 1" />
             <video autoplay loop muted src="video1.mp4"></video>
           </div>
           <div class="box">
-            <img src="img2.jpg" alt="" />
+            <img src="img2.jpg" alt="Service 2" />
             <video autoplay loop muted src="video2.mp4"></video>
           </div>
           <div class="box">
-            <img src="img3.jpg" alt="" />
+            <img src="img3.jpg" alt="Service 3" />
             <video autoplay loop muted src="video3.mp4"></video>
           </div>
         </div>
       </div>
-      <div class="page4">
+
+      <!-- Page 4 - Philosophy Section -->
+      <div class="page4" id="philosophy">
         <div class="p4-p1">
           <h2>we operate on a simple philosophy</h2>
           <h2>Quality over quantity</h2>
@@ -82,10 +106,12 @@
         <div class="p4-p2">
           <h1>we partner with 5 clients each year. this</h1>
           <h1>allows for intense focus on the transformation and</h1>
-          <h1>launch of your brand by our very best team,which</h1>
+          <h1>launch of your brand by our very best team, which</h1>
           <h1>is the only team we have</h1>
         </div>
       </div>
+
+      <!-- Page 5 - Animation Section -->
       <div class="page5">
         <video
           autoplay
@@ -115,12 +141,13 @@
         </svg>
         <svg
           class="abs tl:0 fit transform rotate:0 (.in-view):rotate:237deg (.in-view):tween:all,2.8s,easeOutSlow"
-          viewBox="0 0 100 100"
-        >
-          <circle cx="50" cy="1" r="1" fill="#fff"></circle>
+          viewBox="0 0 100 100">
+          <circle class="crl" cx="50" cy="1" r="1" fill="#fff"></circle>
         </svg>
       </div>
-      <div class="page6">
+
+      <!-- Page 6 - Contact Section -->
+      <div class="page6" id="contact">
         <div class="page5-top">
           <h1>Get in touch.</h1>
           <div class="swiperdiv">
@@ -128,26 +155,124 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="pic1.webp" alt="" />
-                  <img src="pic2.webp" alt="" />
-                  <img src="pic3.webp" alt="" />
-                  <img src="pic4.webp" alt="" />
-                  <img src="pic5.webp" alt="" />
+                  <img src="pic1.webp" alt="Client 1" />
+                  <img src="pic2.webp" alt="Client 2" />
+                  <img src="pic3.webp" alt="Client 3" />
+                  <img src="pic4.webp" alt="Client 4" />
+                  <img src="pic5.webp" alt="Client 5" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="pic1.webp" alt="" />
-                  <img src="pic2.webp" alt="" />
-                  <img src="pic3.webp" alt="" />
-                  <img src="pic4.webp" alt="" />
-                  <img src="pic5.webp" alt="" />
+                  <img src="pic1.webp" alt="Client 1" />
+                  <img src="pic2.webp" alt="Client 2" />
+                  <img src="pic3.webp" alt="Client 3" />
+                  <img src="pic4.webp" alt="Client 4" />
+                  <img src="pic5.webp" alt="Client 5" />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="form-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <h2>rejuice</h2>
+            </div>
+            <div class="footer-info">
+              <p>We transform brands through bold strategy and creative excellence. Our digital-first approach ensures your brand not just exists but thrives in today's fast-paced market.</p>
+              <p>Ready to accelerate your brand? Let's create something extraordinary together.</p>
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+              <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-col">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="#">Brand Strategy</a></li>
+                <li><a href="#">Visual Identity</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Content Creation</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Locations</h3>
+              <ul>
+                <li><a href="#">Paris, France</a></li>
+                <li><a href="#">San Diego, USA</a></li>
+                <li><a href="#">Remote Worldwide</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="mailto:hello@rejuice.com">hello@rejuice.com</a></li>
+                <li><a href="tel:+15558765432">+1 (555) 876-5432</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 REJUICE. All rights reserved.</p>
+          <p>Designed with passion. Built with precision.</p>
+        </div>
+        <div class="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </div>
       </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"

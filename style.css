@@ -18,14 +18,34 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
+/* Loader - unchanged as requested */
+.loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
+.loader h3 {
+    color: white;
+    font-family: nb;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+/* Page 1 - Hero Section */
 .page1 {
     height: 100vh;
     width: 100%;
     position: relative;
-
 }
 
 .ph1 {
@@ -71,7 +91,7 @@ body {
 }
 
 .nav h3 {
-    font: size 1.4vw;
+    font-size: 1.4vw;
     font-weight: 100;
     font-family: nb;
 }
@@ -80,6 +100,7 @@ body {
     font-size: 1.4vw;
     font-weight: 100;
     font-family: nb;
+    cursor: pointer;
 }
 
 .cursor {
@@ -101,8 +122,9 @@ body {
     font-weight: 500;
 }
 
+/* Page 2 - About Section */
 .page2 {
-    height: 100vh;
+    min-height: 100vh;
     padding: 0vw 2.2vw;
     width: 100%;
     background-color: #edc96f;
@@ -119,7 +141,7 @@ body {
 }
 
 .page2-part1 h4 {
-    width: 25%;
+    width: 45%;
     line-height: 2.2vw;
     font-size: 1.8vw;
     font-weight: 100;
@@ -127,11 +149,16 @@ body {
 }
 
 .page2-part1 h3 {
-    width: 25%;
+    width: 45%;
     line-height: 2.2vw;
     font-size: 1.8vw;
     font-weight: 100;
     font-family: nb;
+    text-align: right;
+}
+
+.page2-part2 {
+    padding: 4vw 0;
 }
 
 .page2-part2 h4 {
@@ -144,9 +171,9 @@ body {
     word-spacing: 5px;
     text-align: center;
     padding: 0vw 4vw;
-    font-family: nb;
 }
 
+/* Page 3 - Services Section */
 .page3 {
     min-height: 100vh;
     width: 100%;
@@ -175,7 +202,6 @@ body {
 .page3-top h2 {
     font-size: 4vw;
     font-weight: 500;
-
 }
 
 .page3-elements {
@@ -190,7 +216,9 @@ body {
 .page3-elements .box {
     height: 100%;
     position: relative;
-    width: 33%;
+    width: 32%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .page3-elements .box video {
@@ -198,7 +226,6 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
-
 }
 
 .page3-elements .box img {
@@ -212,10 +239,12 @@ body {
 
 .page3-elements .box:hover img {
     opacity: 0;
+    transform: scale(1.05);
 }
 
+/* Page 4 - Philosophy Section */
 .page4 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     padding: 5vw;
@@ -232,7 +261,7 @@ body {
     font-family: nb;
     font-weight: 100;
     text-transform: capitalize;
-
+    font-size: 2vw;
 }
 
 .p4-p2 {
@@ -250,6 +279,7 @@ body {
     word-spacing: .5vw;
 }
 
+/* Page 5 - Animation Section */
 .page5 {
     height: 100vh;
     width: 100%;
@@ -257,12 +287,13 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-
+    overflow: hidden;
 }
 
 .page5 video {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .page5 svg {
@@ -270,11 +301,11 @@ body {
     height: 65%;
 }
 
+/* Page 6 - Contact Section */
 .page6 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 4vw 0vw;
-
 }
 
 .page6 h1 {
@@ -308,10 +339,15 @@ body {
 }
 
 .swiper-slide img {
-    /* display: block; */
     width: 19%;
     align-items: flex-end;
     object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05);
 }
 
 .swiper {
@@ -319,21 +355,797 @@ body {
     margin-right: auto;
 }
 
-.loader {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+/* Contact Form */
+.contact-form {
+    padding: 4vw;
+    margin-top: 2vw;
 }
 
-.loader h3 {
-    color: white;
+.form-group {
+    margin-bottom: 2vw;
+}
+
+.form-group label {
+    display: block;
     font-family: nb;
-    font-size: 2vw;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: nb;
+    font-size: 1.2vw;
+}
+
+.form-group textarea {
+    height: 15vh;
+    resize: none;
+}
+
+.form-button {
+    background-color: #FF5F38;
+    color: #fff;
+    border: none;
+    padding: 1vw 2vw;
+    font-family: nb;
+    font-size: 1.2vw;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #E34A21;
+}
+
+/* New Footer Section */
+.footer {
+    min-height: 70vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 5vw 3vw;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-left {
+    width: 40%;
+}
+
+.footer-right {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo h2 {
+    font-family: rj;
+    font-size: 5vw;
+    font-weight: 100;
+    margin-bottom: 2vw;
+}
+
+.footer-info p {
+    font-family: nb;
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+    margin-bottom: 2vw;
+    font-weight: 300;
+}
+
+.footer-col {
+    width: 30%;
+    margin-bottom: 3vw;
+}
+
+.footer-col h3 {
+    font-family: nb;
+    font-size: 1.5vw;
     font-weight: 500;
+    margin-bottom: 1.5vw;
+    color: #FF5F38;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 1vw;
+}
+
+.footer-col ul li a {
+    font-family: nb;
+    font-size: 1.2vw;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #FF5F38;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1vw;
+}
+
+.social-icons a {
+    height: 3vw;
+    width: 3vw;
+    background-color: #FF5F38;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 4vw;
+    padding-top: 2vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-family: nb;
+    font-size: 1vw;
+    opacity: 0.7;
+}
+
+.back-to-top {
+    background-color: #FF5F38;
+    color: #fff;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 3vw;
+    bottom: 3vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-10px);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-close {
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    font-family: nb;
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.menu-items {
+    text-align: center;
+}
+
+.menu-items ul {
+    list-style: none;
+}
+
+.menu-items ul li {
+    margin-bottom: 2vw;
+}
+
+.menu-items ul li a {
+    font-family: rj;
+    font-size: 5vw;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-items ul li a:hover {
+    color: #FF5F38;
+}
+
+
+/* Media Queries for screen sizes from 1024px down to 325px */
+
+/* Large Tablets (1024px to 769px) */
+@media screen and (max-width: 1024px) {
+    /* Loader */
+    .loader h3 {
+        font-size: 3vw;
+    }
+
+    /* Navigation */
+    .nav h3, .nav h4 {
+        font-size: 2vw;
+    }
+
+    /* Page 1 - Hero Section */
+    .page1-content h1 {
+        font-size: 28vw;
+        line-height: 32vw;
+    }
+
+    .cursor {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .cursor h5 {
+        font-size: 1.6vw;
+    }
+
+    /* Page 2 - About Section */
+    .page2-part1 h4, .page2-part1 h3 {
+        font-size: 2.2vw;
+        line-height: 2.8vw;
+    }
+
+    .page2-part2 h4 {
+        font-size: 4.5vw;
+        line-height: 5.5vw;
+        padding: 0 3vw;
+    }
+
+    /* Page 3 - Services Section */
+    .page3-top h4 {
+        font-size: 1.4vw;
+    }
+
+    .page3-top h2 {
+        font-size: 5vw;
+    }
+
+    /* Page 4 - Philosophy Section */
+    .p4-p1 h2 {
+        font-size: 2.5vw;
+    }
+
+    .p4-p2 h1 {
+        font-size: 4.2vw;
+        line-height: 5.4vw;
+    }
+
+    /* Page 6 - Contact Section */
+    .form-group label, .form-group input, .form-group textarea, .form-button {
+        font-size: 1.6vw;
+    }
+
+    /* Footer */
+    .footer-logo h2 {
+        font-size: 6vw;
+    }
+
+    .footer-info p, .footer-col ul li a {
+        font-size: 1.6vw;
+        line-height: 2.2vw;
+    }
+
+    .footer-col h3 {
+        font-size: 2vw;
+    }
+}
+
+/* Medium Tablets (768px to 601px) */
+@media screen and (max-width: 768px) {
+    /* Loader */
+    .loader h3 {
+        font-size: 4vw;
+    }
+    
+    /* Navigation */
+    .nav {
+        padding: 4vw 4vw;
+    }
+    
+    .nav h3, .nav h4 {
+        font-size: 2.8vw;
+    }
+    
+    /* Page 1 - Hero Section */
+    .page1-content h1 {
+        font-size: 28vw;
+        line-height: 36vw;
+    }
+    
+    .cursor {
+        height: 14vw;
+        width: 14vw;
+    }
+    
+    .cursor h5 {
+        font-size: 2.2vw;
+    }
+    
+    /* Page 2 - About Section */
+    .page2 {
+        padding: 0vw 1.5vw;
+    }
+    
+    .page2-part1 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1.5vw;
+        padding-top: 6vw;
+    }
+    
+    .page2-part1 h4, .page2-part1 h3 {
+        width: 100%;
+        font-size: 3vw;
+        line-height: 3.8vw;
+        margin-bottom: 4vw;
+    }
+    
+    .page2-part1 h3 {
+        text-align: left;
+    }
+    
+    .page2-part2 h4 {
+        font-size: 5.5vw;
+        line-height: 6.5vw;
+        padding: 0 2vw;
+    }
+    
+    /* Page 3 - Services Section */
+    .page3-top h4 {
+        font-size: 2vw;
+    }
+    
+    .page3-top h4 span {
+        font-size: 1.2vw;
+    }
+    
+    .page3-top h2 {
+        font-size: 6vw;
+    }
+    
+    .page3-elements {
+        flex-direction: column;
+        height: auto;
+        gap: 3vw;
+        margin-top: 5vw;
+    }
+    
+    .page3-elements .box {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    /* Page 4 - Philosophy Section */
+    .p4-p1 h2 {
+        font-size: 3.5vw;
+    }
+    
+    .p4-p2 h1 {
+        width: 100%;
+        font-size: 5vw;
+        line-height: 6.5vw;
+    }
+    
+    /* Page 6 - Contact Section */
+    .page6 h1 {
+        font-size: 14vw;
+    }
+    
+    .swiperdiv {
+        height: 40vh;
+    }
+    
+    .swiper-slide img {
+        width: 30%;
+    }
+    
+    .form-group label, .form-group input, .form-group textarea, .form-button {
+        font-size: 2.2vw;
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+    
+    .footer-left {
+        margin-bottom: 4vw;
+    }
+    
+    .footer-logo h2 {
+        font-size: 8vw;
+    }
+    
+    .footer-info p {
+        font-size: 2.2vw;
+        line-height: 3vw;
+    }
+    
+    .footer-col {
+        width: 48%;
+    }
+    
+    .footer-col h3 {
+        font-size: 3vw;
+    }
+    
+    .footer-col ul li a {
+        font-size: 2.2vw;
+    }
+    
+    .social-icons a {
+        height: 5vw;
+        width: 5vw;
+    }
+    
+    .footer-bottom p {
+        font-size: 1.8vw;
+    }
+    
+    .back-to-top {
+        height: 6vw;
+        width: 6vw;
+    }
+    
+    /* Menu Overlay */
+    .menu-close {
+        font-size: 2.4vw;
+    }
+    
+    .menu-items ul li a {
+        font-size: 7vw;
+    }
+}
+
+/* Mobile Landscape (600px to 481px) */
+@media screen and (max-width: 600px) {
+    /* Loader */
+    .loader h3 {
+        font-size: 5vw;
+    }
+    
+    /* Navigation */
+    .nav {
+        padding: 5vw 5vw;
+    }
+    
+    .nav h3, .nav h4 {
+        font-size: 3.8vw;
+    }
+    
+    /* Page 1 - Hero Section */
+    .page1-content h1 {
+        font-size: 28vw;
+        line-height: 42vw;
+    }
+    
+    .cursor {
+        height: 18vw;
+        width: 18vw;
+    }
+    
+    .cursor h5 {
+        font-size: 3vw;
+    }
+    
+    /* Page 2 - About Section */
+    .page2-part1 h4, .page2-part1 h3 {
+        font-size: 4vw;
+        line-height: 5vw;
+        margin-bottom: 5vw;
+    }
+    
+    .page2-part2 h4 {
+        font-size: 6.5vw;
+        line-height: 8vw;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+    
+    /* Page 3 - Services Section */
+    .page3 {
+        padding: 5vw 3vw;
+    }
+    
+    .page3-top h4 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    
+    .page3-top h4 span {
+        font-size: 2vw;
+    }
+    
+    .page3-top h2 {
+        font-size: 8vw;
+    }
+    
+    .page3-elements .box {
+        height: 40vh;
+    }
+    
+    /* Page 4 - Philosophy Section */
+    .page4 {
+        padding: 8vw 4vw;
+    }
+    
+    .p4-p1 h2 {
+        font-size: 4.5vw;
+    }
+    
+    .p4-p2 h1 {
+        font-size: 6.5vw;
+        line-height: 8.5vw;
+        letter-spacing: 1px;
+    }
+    
+    /* Page 6 - Contact Section */
+    .page6 h1 {
+        font-size: 16vw;
+    }
+    
+    .swiperdiv {
+        height: 30vh;
+        margin-top: -10%;
+    }
+    
+    .swiper-slide img {
+        width: 45%;
+    }
+    
+    .contact-form {
+        padding: 6vw 4vw;
+    }
+    
+    .form-group {
+        margin-bottom: 4vw;
+    }
+    
+    .form-group label, .form-group input, .form-group textarea, .form-button {
+        font-size: 3.2vw;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 8vw 4vw;
+    }
+    
+    .footer-logo h2 {
+        font-size: 10vw;
+    }
+    
+    .footer-info p {
+        font-size: 3.2vw;
+        line-height: 4.2vw;
+    }
+    
+    .footer-col {
+        width: 100%;
+        margin-bottom: 6vw;
+    }
+    
+    .footer-col h3 {
+        font-size: 4vw;
+        margin-bottom: 2.5vw;
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 2vw;
+    }
+    
+    .footer-col ul li a {
+        font-size: 3.2vw;
+    }
+    
+    .social-icons a {
+        height: 8vw;
+        width: 8vw;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 3vw;
+    }
+    
+    .footer-bottom p {
+        font-size: 2.8vw;
+    }
+    
+    .back-to-top {
+        height: 10vw;
+        width: 10vw;
+        right: 4vw;
+        bottom: 4vw;
+    }
+    
+    /* Menu Overlay */
+    .menu-close {
+        font-size: 3.5vw;
+        top: 5vw;
+        right: 5vw;
+    }
+    
+    .menu-items ul li {
+        margin-bottom: 4vw;
+    }
+    
+    .menu-items ul li a {
+        font-size: 10vw;
+    }
+}
+
+/* Mobile Portrait (480px to 376px) */
+@media screen and (max-width: 480px) {
+    /* Loader */
+    .loader h3 {
+        font-size: 6vw;
+    }
+    
+    /* Navigation */
+    .nav {
+        padding: 6vw 4vw;
+    }
+    
+    .nav h3, .nav h4 {
+        font-size: 4.5vw;
+    }
+    
+    /* Page 1 - Hero Section */
+    .page1-content h1 {
+        font-size: 22vw;
+        line-height: 48vw;
+    }
+    
+    .cursor {
+        height: 20vw;
+        width: 20vw;
+    }
+    
+    .cursor h5 {
+        font-size: 3.5vw;
+    }
+    
+    /* Page 2 - About Section */
+    .page2-part1 {
+        padding-top: 8vw;
+    }
+    
+    .page2-part1 h4, .page2-part1 h3 {
+        font-size: 5vw;
+        line-height: 6.2vw;
+        margin-bottom: 6vw;
+    }
+    
+    .page2-part2 {
+        padding: 6vw 0;
+    }
+    
+    .page2-part2 h4 {
+        font-size: 7.5vw;
+        line-height: 9vw;
+        word-spacing: 2px;
+    }
+    
+    /* Page 3 - Services Section */
+    .page3 {
+        padding: 8vw 4vw;
+    }
+    
+    .page3-top h4 {
+        font-size: 4vw;
+    }
+    
+    .page3-top h4 span {
+        font-size: 2.5vw;
+        padding: 3px 8px;
+    }
+    
+    .page3-top h2 {
+        font-size: 9vw;
+    }
+    
+    .page3-elements {
+        gap: 5vw;
+        margin-top: 8vw;
+    }
+    
+    .page3-elements .box {
+        height: 30vh;
+    }
+    
+    /* Page 4 - Philosophy Section */
+    .page4 {
+        padding: 10vw 4vw;
+    }
+    
+    .p4-p1 h2 {
+        font-size: 5.5vw;
+    }
+    
+    .p4-p2 h1 {
+        font-size: 7.5vw;
+        line-height: 9.5vw;
+        letter-spacing: 0;
+    }
+    
+    /* Page 6 - Contact Section */
+    .page6 h1 {
+        font-size: 18vw;
+    }
+    
+    .swiperdiv {
+        height: 25vh;
+        margin-top: -15%;
+    }
+    
+    .swiper {
+        width: 150%;
+    }
+    
+    .swiper-slide img {
+        width: 80%;
+    }
+    
+    .contact-form {
+        padding: 8vw 4vw;
+    }
+    
+    .form-group {
+        margin-bottom: 5vw;
+    }
+    
+    .form-group label, .form-group input, .form-group textarea {
+        font-size: 4vw;
+    }
+    
+    .form-button {
+        font-size: 4vw;
+        padding: 2vw
+    }
 }
